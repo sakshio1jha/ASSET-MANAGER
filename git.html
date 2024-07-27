@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url("https://i.ibb.co/9ggt4xx/indore.png"); /* Update this path to the actual location of your image */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 300px;
+            text-align: center;
+            padding: 50px 0;
+            color: white; /* Ensure text is readable over the background image */        
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #DAA06D;
+        }
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #DAA06D;
+        }
+        .login-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:#DAA06D;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .login-badge a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .login-badge a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        footer {
+            background-color: #DAA06D;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact-box {
+            background-color:#DAA06D;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+        .contact-box address {
+            font-style: normal;
+            line-height: 1.6;
+            color: white;
+        }
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="login-badge">
+            <a href="login.html">Login</a>
+        </div>
+        <h1></h1>
+    </header>
+    <nav class="nav">
+        <a href="#Home">Home</a>
+        <a href="#Assets">Assets</a>
+        <a href="#Services">Services</a>
+        <a href="#Contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="Home" class="section">
+            <h2>Welcome to Indore Municipal Government</h2>
+            <p>Welcome to the Asset Management Hub, an advanced online platform designed to revolutionize the way municipal corporations manage their diverse assets. Our website provides a comprehensive suite of tools and features to streamline asset tracking, maintenance, and optimization, ultimately enhancing public services and operational efficiency.</p>
+        </section>
+        <section id="Assets" class="section">
+            <h2>Assets</h2>
+            <p>Infrastructure</p>
+            <p>Vehicles</p>
+            <p>Public Properties</p>
+            <p>Equipment</p>
+        </section>
+        <section id="Services" class="section">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Public Health</li>
+                <li>Education</li>
+                <li>Optimizing Maintenance Cost</li>
+                <li>Waste Management</li>
+            </ul>
+        </section>
+        <section id="Contact" class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please reach out to us:</p>
+            <div class="contact-box">
+                <address>
+                    Email: <a href="mailto:info@indore.gov.in">info@indore.gov.in</a><br>
+                    Phone: +91-731-XXXXXXX<br>
+                    Address: Municipal Office, Indore, MP, India
+                </address>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Indore Municipal Government. All rights reserved.</p>
+    </footer>
+</body>
+</html>

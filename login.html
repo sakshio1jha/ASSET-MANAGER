@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('C:/Users/Akshita/Pictures/Screenshots/Screenshot 2024-07-26 202115.png') no-repeat center center fixed; /* Replace with actual URL */
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #6E260E; /* Change label color */
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #6E260E;
+            border-radius: 4px;
+            color: #6E260E; /* Change input and select text color */
+        }
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #6E260E;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .form-group button:hover {
+            background-color: #501A0A; /* Change button hover color */
+        }
+        .header {
+            display: flex;
+            justify-content: center; /* Center the header */
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            height: 70px;
+        }
+        h2 {
+            color: #6E260E; /* Change h2 color */
+        }
+        .message {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .message.success {
+            color: green;
+        }
+        .message.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <a href="https://freeimage.host/"><img src="https://iili.io/dIAvnlj.jpg" alt="dIAvnlj.jpg" border="0"></a>
+        <a href="https://ibb.co/HdLXg0j"><img src="https://i.ibb.co/HdLXg0j/download.jpg" alt="download" border="0"></a>
+    </div>
+    <h2>Login</h2>
+    <div class="message" id="message"></div> <!-- Message element -->
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter your name" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="1-9 ; A-Z" required>
+    </div>
+    <div class="form-group">
+        <label for="role">Login as</label>
+        <select id="role" name="role" required>
+            <option value="">Select your role</option>
+            <option value="government_head">Government Head</option>
+            <option value="worker">Worker</option>
+            <option value="citizen">Citizen</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button type="button" onclick="login()">Login</button>
+    </div>
+</div>
+
+<script>
+    // Sample user data
+    const users = [
+        { username: 'govhead', password: 'gov123', role: 'government_head' },
+        { username: 'worker1', password: 'work123', role: 'worker' },
+        { username: 'citizen1', password: 'citizen123', role: 'citizen' }
+    ];
+
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const role = document.getElementById('role').value;
+        const messageElement = document.getElementById('message');
+        
+        if (!role) {
+            messageElement.textContent = 'Please select your role.';
+            messageElement.className = 'message error';
+            return;
+        }
+
+        const user = users.find(user => user.username === username && user.password === password && user.role === role);
+
+        if (user) {
+            messageElement.textContent = `Login successful as ${role}.`;
+            messageElement.className = 'message success';
+            // Redirect to appropriate page based on role
+            // Example: window.location.href = 'dashboard.html';
+        } else {
+            messageElement.textContent = 'Invalid username, password, or role.';
+            messageElement.className = 'message error';
+        }
+    }
+</script>
+
+</body>
+</html>
